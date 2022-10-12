@@ -12,7 +12,6 @@ describe('HeroFilterService', () => {
   it('should be created filter', () => {
       expect(service).toBeTruthy();
       const response = service.search('Superman')
-      console.log(response)
-      expect(new Hero(response[0])).toBeInstanceOf(Hero)
+     expect(new Hero(response[0])).toBeInstanceOf(Hero)
   });
 });

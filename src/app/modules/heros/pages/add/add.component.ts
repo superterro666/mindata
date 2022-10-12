@@ -54,7 +54,7 @@ export class AddComponent implements OnInit {
     }
     
     setImage(event: string): void {
-        console.log(event)
+     
         this.form.value.image = event;
     }
     

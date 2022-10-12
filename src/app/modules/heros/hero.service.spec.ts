@@ -132,12 +132,8 @@ describe('Hero Api Service', () => {
     
 
     it('delete  hero', () => {
-        console.log("aqui estoy")
         apiService.deleteHero('Superman').subscribe(name => {
-            console.log(name)
             expect(name).not.toBeNull();
-          
-          //expect(new Hero(resp[0])).toBeInstanceOf(Hero);
         })
     });
 });

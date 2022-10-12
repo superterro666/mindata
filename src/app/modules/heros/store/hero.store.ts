@@ -8,7 +8,7 @@ export let heros: Hero[] = [];
 
 export function nameExist(name: string): boolean { 
     const heros = getLocalStorage();
-    console.log(heros)
+   
     return heros.filter((h: Hero) => h.name.toLocaleLowerCase() == name.toLocaleLowerCase()).length > 0 ? true : false;
 
 }

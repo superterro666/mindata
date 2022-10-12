@@ -8,7 +8,6 @@ export function NameNotRepeatValidator(): ValidatorFn {
         if (!value) {
             return null;
         }
-        console.log(nameExist(value) ? { name: true } : null)
         return nameExist(value) ? { name: true } : null;
     }
 }

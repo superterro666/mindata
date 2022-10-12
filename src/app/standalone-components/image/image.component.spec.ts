@@ -40,10 +40,6 @@ describe('ImageComponent', () => {
               } 
         });
           
-
-        
-         
-        console.log(event)
         const response = component.saveFile(event);
         expect(response).not.toBeNull();
 

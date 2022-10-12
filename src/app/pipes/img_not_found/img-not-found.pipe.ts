@@ -6,7 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ImgNotFoundPipe implements PipeTransform {
 
     transform(value: string | null): unknown {
-      console.log(value)
       return value ? value : 'assets/images/not_found.png';
   }
 

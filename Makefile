@@ -8,8 +8,6 @@ run:
 	docker run -d -p 8888:80   mindata  && make start_server
 
 
-build:
-    docker build .
 
 
 

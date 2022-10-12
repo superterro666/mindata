@@ -31,10 +31,7 @@ describe('Store', () => {
     });
 
 
-    it('find hero', () => {
-        const response = nameExist('Superman');
-        expect(response).not.toBeTrue();
-    });
+ 
 
     it('set locale', () => {
         setLocalStorage(heros);

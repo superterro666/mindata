@@ -121,7 +121,7 @@ describe('Hero Api Service', () => {
     it('get hero by name', () => {
         expect(apiService.getHeroByName).toBeTruthy();
         apiService.getHeroByName('Superman').subscribe((hero: Hero) => {
-            expect(hero).toBeInstanceOf(Hero);
+            expect(new Hero(hero)).toBeInstanceOf(Hero);
             
         })
      })

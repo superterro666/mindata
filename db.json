@@ -1,0 +1,28 @@
+{
+    "heros": [
+        {
+            "name": "Superman",
+            "description": "Hombre de acero",
+            "image": "/assets/images/superman.jpg",
+            "gender": "0"
+        },
+        {
+            "name": "Batman",
+            "description": "Hombre murcielago",
+            "image": "/assets/images/batman.webp",
+            "gender": "0"
+        },
+        {
+            "name": "Spiderman",
+            "description": "Hombre de araña",
+            "image": "/assets/images/spiderman.jpg",
+            "gender": "0"
+        },
+        {
+            "name": "CatWoman",
+            "description": "Mujer gato",
+            "image": "/assets/images/catwoman.jpg",
+            "gender": "1"
+        }
+    ]
+}

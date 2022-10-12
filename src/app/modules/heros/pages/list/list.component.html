@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="main">
+        <div class="main_table">
+            <div class="table">
+                <div class="table_title">
+                    <span class="table_title_elem1">     
+                        <h1>Tabla superheroes</h1>
+                    </span>
+                     <app-hero-filter [heros]="heros" (filterEmitter)="searchResults($event)"></app-hero-filter>
+                    <span class="table_title_elem2">
+                        <mat-icon (click)="toAdd()">add</mat-icon>
+                    </span>
+                </div>
+                <div class="table_content">
+                    <mat-table [dataSource]="heros" class="mat-elevation-z8">
+                        <ng-container matColumnDef="image">
+                            <mat-header-cell *matHeaderCellDef> Imagen </mat-header-cell>
+                            <mat-cell *matCellDef="let element">
+                                <img class="image_list" [src]="element.image | imgNotFound"> 
+                             </mat-cell>
+                        </ng-container>
+                        <ng-container matColumnDef="name">
+                            <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+                            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                        </ng-container>
+                        <ng-container matColumnDef="description">
+                            <mat-header-cell *matHeaderCellDef> Descripcion </mat-header-cell>
+                            <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+                        </ng-container>
+                        <ng-container matColumnDef="gender">
+                            <mat-header-cell *matHeaderCellDef> Genero </mat-header-cell>
+                            <mat-cell *matCellDef="let element"> 
+                                <span *ngIf="element.gender | gender; else woman">
+                                    Hombre
+                                </span>
+                                <ng-template #woman>
+                                    Mujer
+                                </ng-template>
+                            </mat-cell>
+                        </ng-container>
+                         <ng-container matColumnDef="actions">
+                                <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+                                <mat-cell *matCellDef="let element">
+                                  <app-actions [hero]="element" (deleteEmit)="heros = $event"></app-actions> 
+                                </mat-cell>
+                        </ng-container>
+
+                        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                    </mat-table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

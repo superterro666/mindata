@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="main row h-100 justify-content-center align-items-center">
+       
+        <div class="main_card back_image">
+            <div class="form">
+                <form class="form_container" [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="col">
+                        <h1 class="form_title">Heros</h1>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Nombre del heroe</mat-label>
+                            <input appToUpperCase matInput placeholder="Nombre del heroe" name="name"
+                                formControlName="name">
+                          
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Description</mat-label>
+                            <textarea matInput placeholder="Nombre del heroe" name="description"
+                                formControlName="description"></textarea>
+                          
+                        </mat-form-field>
+                        <div class="row form_radio">
+                            <mat-label>Genero</mat-label>
+                            <mat-radio-group aria-label="Select an option" formControlName="gender" name="gender"
+                                class="form_radio_group ">
+                                <mat-radio-button value="0">Man</mat-radio-button>
+                                <mat-radio-button value="1">Woman</mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Alta</button>
+                    </div>
+                </form>
+            </div>
+            <div class="image">
+                <app-image [path]="path" (file)="setImage($event)"></app-image>
+            </div>
+        </div>
+    </div>
+</div>

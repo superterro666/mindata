@@ -1,0 +1,7 @@
+
+<ul class="list">
+    <li><mat-icon (click)="edit()">edit</mat-icon></li>
+    <li><mat-icon (click)="delete()">delete_outline</mat-icon></li>
+</ul>
+
+<app-alert (deleteEmit)="deleteFromComponent($event)"></app-alert>
